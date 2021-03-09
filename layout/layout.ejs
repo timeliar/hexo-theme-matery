@@ -7,6 +7,18 @@
 <% } %>
 
 <body>
+    <script>
+        const LOCAL = {
+          quiz: {
+            choice: "<%- __('quiz.choice') %>",
+            multiple: "<%- __('quiz.multiple') %>",
+            true_false: "<%- __('quiz.true_false') %>",
+            essay: "<%- __('quiz.essay') %>",
+            gap_fill: "<%- __('quiz.gap_fill') %>",
+            mistake: "<%- __('quiz.mistake') %>",
+          },
+        };
+    </script>
     <%- partial('_partial/header') %>
     <%- body %>
 
@@ -21,15 +33,15 @@
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.scrollProgress) %>"></script>
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.lightgallery) %>"></script>
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.matery) %>"></script>
+    <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.dom) %>"></script>
+    <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.postBeauty) %>"></script>
 
     <%- partial('_partial/baidu-analytics') %>
     <%- partial('_partial/baidu-push') %>
-    <% if (theme.clicklove.enable) { %>
-    <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.clicklove) %>" async="async"></script>
+    <% if (theme.click.enable) { %>
+    <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js[theme.click.effect]) %>" async="async"></script>
     <% } %>
-    <% if (theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
-    <script async src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.busuanzi) %>"></script>
-    <% } %>
+    <!-- 替换成 leancloud 统计 -->
 
     <% if (theme.tidio.enable) { %>
         <script src="//code.tidio.co/<%- theme.tidio.public_key %>.js"></script>
@@ -95,20 +107,9 @@
         src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.canvas_nest) %>"></script>
     <% } %>
 
-    <% if (theme.ribbon.enable) { %>
-    <% var ribbonSrc = theme.ribbon.clickChange ? theme.libs.js.ribbon : theme.libs.js.ribbonRefresh; %>
-    <script type="text/javascript" size="<%- theme.ribbon.size %>" alpha='<%- theme.ribbon.alpha %>'
-        zIndex="<%- theme.ribbon.zIndex %>" src="<%- theme.jsDelivr.url %><%- url_for(ribbonSrc) %>" async="async"></script>
-    <% } %>
-
-    <% if (theme.ribbon_dynamic.enable) { %>
-    <script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.ribbon_dynamic) %>" async="async"></script>
-    <% } %>
-
     <% if (theme.instantpage.enable) { %>
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.instantpage) %>" type="module"></script>
     <% } %>
-
 </body>
 
 </html>

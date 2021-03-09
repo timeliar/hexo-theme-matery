@@ -69,3 +69,10 @@ paycontact: Please contact the author
 payreprint: to pay for reprinting.
 pleaseFollowReprintPolicy: Copied successfully, please follow the reprint policy of this article
 checkPolicy: more
+quiz:
+  choice: Multiple Choice
+  multiple: Multiple Answer
+  true_false: True/False
+  essay: Questions
+  gap_fill: Gap Filling
+  mistake: Wrong Answer

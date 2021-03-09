@@ -237,14 +237,6 @@
 
         <div class="card">
 
-            <% if (theme.gitalk && theme.gitalk.enable) { %>
-            <%- partial('_partial/gitalk') %>
-            <% } %>
-
-            <% if (theme.gitment.enable) { %>
-            <%- partial('_partial/gitment') %>
-            <% } %>
-
             <% if (theme.disqus.enable) { %>
             <%- partial('_partial/disqus') %>
             <% } %>
@@ -255,10 +247,6 @@
 
             <% if (theme.valine && theme.valine.enable) { %>
             <%- partial('_partial/valine') %>
-            <% } %>
-
-            <% if (theme.twikoo && theme.twikoo.enable) { %>
-            <%- partial('_partial/twikoo') %>
             <% } %>
 
         </div>

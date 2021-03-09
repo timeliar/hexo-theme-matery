@@ -69,3 +69,10 @@ paycontact: 请联系作者
 payreprint: 付费转载。
 pleaseFollowReprintPolicy: 复制成功，请遵循本文的转载规则
 checkPolicy: 查看
+quiz:
+  choice: 单选题
+  multiple: 多选题
+  true_false: 判断题
+  essay: 问答题
+  gap_fill: 填空题
+  mistake: 错题备注
