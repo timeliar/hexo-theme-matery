@@ -1,3 +1,5 @@
+$alphabet = 'A.', 'B.', 'C.', 'D.', 'E.', 'F.', 'G.', 'H.', 'I.', 'J.', 'K.', 'L.', 'M.', 'N.', 'O.', 'P.', 'Q.', 'R.', 'S.', 'T.', 'U.', 'V.', 'W.', 'X.', 'Y.', 'Z.';
+
 $check {
   &::before {
     color: var(--color-green) !important;
@@ -6,7 +8,7 @@ $check {
   &::after {
     @extend .ico-fa-check:before;
     color: var(--color-green) !important;
-    animation: fadeIn .5s !important;
+    animation: fadeIn 0.5s !important;
   }
 }
 
@@ -18,18 +20,19 @@ $times {
   &::after {
     @extend .ico-fa-times:before;
     color: var(--color-red) !important;
-    animation: fadeIn .5s !important;
+    animation: fadeIn 0.5s !important;
   }
 }
 
 #artDetail ol>li.quiz {
-  margin: .625rem 0 !important;
-  &::before{
+  margin: 0.625rem 0 !important;
+
+  &::before {
     display: none;
   }
 
   &.ruby::before {
-    top: .5rem;
+    top: 0.5rem;
   }
 
   >p {
@@ -37,10 +40,10 @@ $times {
     cursor: pointer;
 
     &:first-child::before {
-      content: "[" attr(data-type) "]";
+      content: '[' attr(data-type) ']';
       font-size: $font-size-smallest;
       color: var(--grey-4);
-      margin: auto .3125rem;
+      margin: auto 0.3125rem;
     }
   }
 
@@ -48,21 +51,21 @@ $times {
     display: inline-block;
     min-width: 2.5rem;
     text-align: center;
-    padding: 0 .625rem;
+    padding: 0 0.625rem;
     text-indent: -624.9375rem;
 
     &::after {
       display: block;
-      content: "";
+      content: '';
       background: var(--text-color);
       width: calc(100% + 1.25rem);
-      height: .0625rem;
-      margin-bottom: -.0625rem;
-      margin-left: -.625rem;
+      height: 0.0625rem;
+      margin-bottom: -0.0625rem;
+      margin-left: -0.625rem;
     }
   }
 
-  &.show.fill .gap{
+  &.show.fill .gap {
     text-indent: 0rem;
   }
 
@@ -75,14 +78,14 @@ $times {
 
     .mistake {
       display: block;
-      border: .1875rem dashed var(--grey-4);
-      padding: .625rem 1.25rem;
+      border: 0.1875rem dashed var(--grey-4);
+      padding: 0.625rem 1.25rem;
       background: var(--grey-3);
-      margin: .3125rem;
+      margin: 0.3125rem;
 
       &::before {
         display: block;
-        content: "[" attr(data-type) "]";
+        content: '[' attr(data-type) ']';
         font-size: $font-size-smaller;
         color: var(--grey-4);
       }
@@ -107,37 +110,21 @@ $times {
   }
 
   ul.options {
-    padding-inline-start: .625rem;
+    padding-inline-start: 0.625rem;
 
     li {
-
       &::before {
         color: var(--color-grey);
-        margin-right: .625rem;
+        margin-right: 0.625rem;
         the-transition();
         li-nodot();
       }
 
-      &:nth-child(1)::before {
-        content: "A."
+      for $ab, $i in $alphabet {
+        &:nth-child({$i+1})::before {
+          content: $ab;
+        }
       }
-
-      &:nth-child(2)::before {
-        content: "B."
-      }
-
-      &:nth-child(3)::before {
-        content: "C."
-      }
-
-      &:nth-child(4)::before {
-        content: "D."
-      }
-
-      &:nth-child(5)::before {
-        content: "E."
-      }
-
     }
   }
 
@@ -171,7 +158,7 @@ $times {
       font-family-icons();
       position: absolute;
       left: -1.2rem;
-      top: .25rem;
+      top: 0.25rem;
     }
   }
 
@@ -183,6 +170,3 @@ $times {
     @extend $times;
   }
 }
-
-
-
