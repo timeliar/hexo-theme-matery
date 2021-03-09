@@ -1,38 +1,4 @@
 const postBeauty = function () {
-  $(".post.block").oncopy = function (event) {
-    showtip(LOCAL.copyright);
-
-    var copyright = $d("#copyright");
-    if (window.getSelection().toString().length > 30 && copyright) {
-      event.preventDefault();
-      var author = "# " + copyright.child(".author").innerText;
-      var link = "# " + copyright.child(".link").innerText;
-      var license = "# " + copyright.child(".license").innerText;
-      var htmlData =
-        author +
-        "<br>" +
-        link +
-        "<br>" +
-        license +
-        "<br><br>" +
-        window.getSelection().toString().replace(/\r\n/g, "<br>");
-      var textData =
-        author +
-        "\n" +
-        link +
-        "\n" +
-        license +
-        "\n\n" +
-        window.getSelection().toString().replace(/\r\n/g, "\n");
-      if (event.clipboardData) {
-        event.clipboardData.setData("text/html", htmlData);
-        event.clipboardData.setData("text/plain", textData);
-      } else if (window.clipboardData) {
-        return window.clipboardData.setData("text", textData);
-      }
-    }
-  };
-
   $d.each("li ruby", function (element) {
     var parent = element.parentNode;
     if (element.parentNode.tagName != "LI") {
