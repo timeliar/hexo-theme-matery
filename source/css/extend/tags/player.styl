@@ -46,19 +46,19 @@
   .play-pause {
     font-size: 130%;
     &::before {
-      @extend .fa-play-circle:before;
+      @extend .ico-fa-play-circle:before;
     }
   }
 
   .backward {
     &::before {
-      @extend .fa-backward:before;
+      @extend .ico-fa-backward:before;
     }
   }
 
   .forward {
     &::before {
-      @extend .fa-forward:before;
+      @extend .ico-fa-forward:before;
     }
   }
 
@@ -66,10 +66,10 @@
     position: relative;
 
     &.off::before {
-      @extend .fa-volume-off:before;
+      @extend .ico-fa-volume-off:before;
     }
     &.on::before {
-      @extend .fa-volume-mute:before;
+      @extend .ico-fa-volume-mute:before;
     }
 
     .bar {
@@ -88,13 +88,13 @@
 
   .mode {
     &.random::before {
-      @extend .fa-random:before;
+      @extend .ico-fa-random:before;
     }
     &.loop::before {
-      @extend .fa-truck-loading:before;
+      @extend .ico-fa-truck-loading:before;
     }
     &.order::before {
-      @extend .fa-first-order:before;
+      @extend .ico-fa-first-order:before;
     }
   }
 
@@ -166,7 +166,7 @@
 
         &::before {
           font-family-icons();
-          @extend .fa-play:before;
+          @extend .ico-fa-play:before;
           color: currentColor;
         }
 
@@ -355,7 +355,7 @@
 .playing {
   .player-info .play-pause {
     &::before {
-      @extend .fa-pause-circle:before;
+      @extend .ico-fa-pause-circle:before;
     }
   }
 }
