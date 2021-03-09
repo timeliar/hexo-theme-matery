@@ -205,7 +205,7 @@ click:
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
   avatar: /assets/avatar.gif
-  career: 咸鱼玩家
+  career: 韭菜炒咸鱼
   introduction: 偶尔翻面
 
 # config my projects informations in about page.
@@ -371,6 +371,7 @@ libs:
     jqcloud: https://cdnjs.cloudflare.com/ajax/libs/jqcloud/1.0.3/jqcloud.min.css
     tocbot: https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.2/tocbot.min.css
     prism: https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css
+    share: https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css
   js:
     matery: /js/matery.js
     dom: /js/dom.js
@@ -394,6 +395,7 @@ libs:
     tocbot: https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.2/tocbot.min.js
     canvas_nest: https://cdnjs.cloudflare.com/ajax/libs/canvas-nest.js/2.0.4/canvas-nest.js
     instantpage: https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js
+    share: https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
