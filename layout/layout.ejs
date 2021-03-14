@@ -110,6 +110,38 @@
     <% if (theme.instantpage.enable) { %>
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.instantpage) %>" type="module"></script>
     <% } %>
+    <% if(theme.clickArray && theme.clickArray.enable) { %> 
+    <script>
+        var a_idx = 0;
+        $("body").click(function(e) {
+            // var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+            var a = <%- JSON.stringify(theme.clickArray.content) %>;
+            var $i = $("<span/>").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+            y = e.pageY;
+            $i.css({
+                "z-index": 100000000,
+                "top": y - 20,
+                "left": x - 15,
+                "position": "absolute",
+                "font-weight": "bold",
+                "color": "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")",
+                "cursor": "default",
+                "user-select":"none"
+            });
+            $("body").append($i);
+            $i.animate({
+                "top": y - 180,
+                "opacity": 0
+            },
+            1500,
+            function() {
+                $i.remove();
+            });
+        });
+    </script>
+    <% } %> 
 </body>
 
 </html>
