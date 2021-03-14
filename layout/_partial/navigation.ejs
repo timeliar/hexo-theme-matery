@@ -48,10 +48,20 @@
   </li>
   <% }); %>
   <li>
-    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light tooltipped" 
+       data-position="bottom" data-tooltip="<%= __('search') %>">
       <i id="searchIcon" class="fas fa-search" title="<%= __('search') %>" style="zoom: 0.85;"></i>
     </a>
   </li>
+  
+  <% if (theme.daovoice.enable) { %>
+  <li>
+    <a href="javascript:daovoice('openMessages')" class="waves-effect waves-light tooltipped" 
+      data-position="bottom" data-tooltip="<%= __('feedback') %>">
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+    </a>
+  </li>
+  <% } %> 
 </ul>
 
 <%- partial('_partial/mobile-nav') %>

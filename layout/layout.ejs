@@ -32,9 +32,9 @@
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.aos) %>"></script>
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.scrollProgress) %>"></script>
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.lightgallery) %>"></script>
-    <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.matery) %>"></script>
-    <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.dom) %>"></script>
-    <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.postBeauty) %>"></script>
+    <script src="<%- url_for(theme.local_libs.js.matery) %>"></script>
+    <script src="<%- url_for(theme.local_libs.js.dom) %>"></script>
+    <script src="<%- url_for(theme.local_libs.js.postBeauty) %>"></script>
 
     <%- partial('_partial/baidu-analytics') %>
     <%- partial('_partial/baidu-push') %>
@@ -86,7 +86,7 @@
             a.charset = "utf-8";
             m.parentNode.insertBefore(a, m)
         })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
-            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+            "//widget.daovoice.io/widget/d52fcd31.js", "daovoice")
         daovoice('init', {
             app_id: "<%- theme.daovoice.app_id %>"
         });
