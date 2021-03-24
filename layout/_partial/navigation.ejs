@@ -62,6 +62,15 @@
     </a>
   </li>
   <% } %> 
+  <!--腾讯兔小巢-->
+  <% if (theme.tuxiaochao.enable) { %>
+    <li>
+      <a href="https://support.qq.com/products/<%- theme.tuxiaochao.productId %>" class="waves-effect waves-light tooltipped" 
+        data-position="bottom" data-tooltip="<%= __('feedback') %>">
+        <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      </a>
+    </li>
+  <%}%>
 </ul>
 
 <%- partial('_partial/mobile-nav') %>
