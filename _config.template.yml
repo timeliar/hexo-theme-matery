@@ -376,7 +376,7 @@ local_libs:
   css:
     matery: /css/matery.css
     mycss: /css/my.css
-    extend: /css/extend.css
+    extend: /css/shoka.css
   js:
     matery: /js/matery.js
     dom: /js/dom.js
