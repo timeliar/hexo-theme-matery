@@ -1,4 +1,4 @@
 /* Here is your custom css styles. */
 #daodream-launcher {
-    display: none;
+    visibility:hidden !important;
 }
