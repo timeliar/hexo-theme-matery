@@ -365,6 +365,7 @@ local_libs:
     matery: /css/matery.css
     mycss: /css/my.css
     extend: /css/shoka.css
+    global: /css/global.css
   js:
     matery: /js/matery.js
     dom: /js/dom.js
@@ -505,6 +506,10 @@ subtitle:
 navMenu:
   mleft: false # 二级侧栏子菜单是否对齐左边
   bgColor: " " # 二级侧栏子菜单背景颜色,留空即为全局背景色
+
+bgColor:
+  left: "#436394"
+  right:  "#567291"
 
 # 网页预加载.
 instantpage:
